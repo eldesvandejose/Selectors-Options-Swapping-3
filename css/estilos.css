@@ -1,0 +1,112 @@
+/* ==========================================================================
+   RESET básico
+   ========================================================================== */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+*, *::before, *::after {
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* ================================================ CLASES DEL PLUGIN ============================================= */
+.claseParaContenedorGeneral {
+	min-width: 600px;
+	min-height: 200px;
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+	position: relative;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Los contenedores globales son tres: los dos laterales tendrán un título y un selector.
+El central tendrá los botones. */
+.claseParaContenedoresGlobales{
+	border: none; 
+	display:flex; 
+	flex-direction:column; 
+	height:100%;
+	align-content: flex-start;
+}
+
+/* Contenedores de títulos */ 
+.claseParaContenedoresDeTitulo {
+	min-width:240px; 
+	overflow: hidden; 
+	border: none; 
+	height: 30px; 
+	font-size: 1.5rem; 
+	background-color: transparent; 
+	text-align: left; 
+	padding-left: 10px; 
+	line-height: 30px; 
+}
+
+/* Contenedores laterales. Son dos, y 
+cada uno tiene contenedorDeEncabezado y un selector. */
+
+/* Clases para contenedores de búsqueda */
+.claseParaContenedoresDeBusqueda{
+	min-width:240px; 
+	overflow:hidden;
+	background-color:transparent;
+	border: none;
+	height: 40px;
+}
+
+.claseParaCamposDeBusqueda{
+	margin-bottom: 0;
+}
+.claseParaCamposDeBusqueda::placeholder, 
+.claseParaCamposDeBusqueda:-ms-input-placeholder, 
+.claseParaCamposDeBusqueda::-webkit-input-placeholder, 
+.claseParaCamposDeBusqueda::-moz-placeholder, 
+{
+	font-style: italic;
+}
+
+/* Contenedores de selectores */
+.claseParaContenedoresDeSelector {
+	min-width:240px; 
+	overflow:hidden;
+	background-color:transparent;
+	border: none;
+	display: flex;
+	flex-wrap: wrap;
+	flex-grow: 1;
+} 
+
+/*Selectores*/
+.claseParaSelectores {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: transparent;
+	height: 100%;
+	flex-grow: 1;
+}
+
+select>option:disabled {
+	background-color: #686868;
+	color: #FFF;
+	font-style: italic;
+}
+
+.claseParaBotones {
+	display: block;
+	width:90%;
+	margin: 4px 5%; 
+} 
