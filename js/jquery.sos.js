@@ -3,51 +3,51 @@
 		/* Definición de las opciones de botones para mostrar por defecto. */
 		var opciones = {
 			/* Nombres de elementos clave de la página. */
-			SOS_3_nombreDelBotonDeAsignar:'boton_agregar', 
-			SOS_3_nombreDelBotonDeQuitar:'boton_quitar', 
-			SOS_3_nombreDelBotonDeGrabar:'boton_grabar', 
+			SOS_3_nombreDelBotonDeAsignar:'boton_agregar',
+			SOS_3_nombreDelBotonDeQuitar:'boton_quitar',
+			SOS_3_nombreDelBotonDeGrabar:'boton_grabar',
 
 			/* Opciones para campos de búsqueda. */
-			SOS_3_mostrarCamposDeBusqueda: false, 
-			SOS_3_busquedasEnTiempoReal: false, 
-			SOS_3_distinguirCapitalizacion: true, 
-			SOS_3_ignorarAcentuadas: true, 
+			SOS_3_mostrarCamposDeBusqueda: false,
+			SOS_3_busquedasEnTiempoReal: false,
+			SOS_3_distinguirCapitalizacion: true,
+			SOS_3_ignorarAcentuadas: true,
 
 			/* Nombre de los scripts auxiliares. */
-			SOS_3_scriptDeLecturaDeDatos:'php/leer_opciones_de_datos.php', 
-			SOS_3_scriptDeGrabacionDeDatos:'php/grabar_selectores.php', 
+			SOS_3_scriptDeLecturaDeDatos:'php/leer_opciones_de_datos.php',
+			SOS_3_scriptDeGrabacionDeDatos:'php/grabar_selectores.php',
 
 			/* Nombres de clases para aplicar estilos. */
-			SOS_3_claseParaContenedorGeneral: 'claseParaContenedorGeneral', 
-			SOS_3_claseParaContenedoresDeBusqueda: 'claseParaContenedoresDeBusqueda', 
-			SOS_3_claseParaContenedoresDeSelector: 'claseParaContenedoresDeSelector', 
-			SOS_3_claseParaContenedoresDeTitulo: 'claseParaContenedoresDeTitulo', 
-			SOS_3_claseParaContenedoresGlobales: 'claseParaContenedoresGlobales', 
-			SOS_3_claseParaBotones: 'claseParaBotones', 
-			SOS_3_claseParaSelectores: 'claseParaSelectores', 
-			SOS_3_claseParaCamposDeBusqueda: 'claseParaCamposDeBusqueda', 
+			SOS_3_claseParaContenedorGeneral: 'claseParaContenedorGeneral',
+			SOS_3_claseParaContenedoresDeBusqueda: 'claseParaContenedoresDeBusqueda',
+			SOS_3_claseParaContenedoresDeSelector: 'claseParaContenedoresDeSelector',
+			SOS_3_claseParaContenedoresDeTitulo: 'claseParaContenedoresDeTitulo',
+			SOS_3_claseParaContenedoresGlobales: 'claseParaContenedoresGlobales',
+			SOS_3_claseParaBotones: 'claseParaBotones',
+			SOS_3_claseParaSelectores: 'claseParaSelectores',
+			SOS_3_claseParaCamposDeBusqueda: 'claseParaCamposDeBusqueda',
 
 			/* Dimensiones del plugin */
 			SOS_3_anchura: '80%', 
-			SOS_3_altura: '400px', 
+			SOS_3_altura: '400px',
 
-			/* Los campos clave de datos para interactuar con los PHP que, 
+			/* Los campos clave de datos para interactuar con los PHP que,
 			a su vez, actúan con la base de datos. */
-			SOS_3_campoDeValorDeOpcion:'valor', 
-			SOS_3_campoDeTextoDeOpcion:'texto', 
-			SOS_3_campoDeOpcionHabilitada:'habilitada', 
-			SOS_3_campoDeOpcionSeleccionada:'seleccionada', 
-			SOS_3_claveParaOpcionSeleccionada:'S', 
-			SOS_3_claveParaOpcionDeseleccionada:'N', 
-			SOS_3_claveParaOpcionHabilitada:'S', 
-			SOS_3_claveParaOpcionDeshabilitada:'N', 
+			SOS_3_campoDeValorDeOpcion:'valor',
+			SOS_3_campoDeTextoDeOpcion:'texto',
+			SOS_3_campoDeOpcionHabilitada:'habilitada',
+			SOS_3_campoDeOpcionSeleccionada:'seleccionada',
+			SOS_3_claveParaOpcionSeleccionada:'S',
+			SOS_3_claveParaOpcionDeseleccionada:'N',
+			SOS_3_claveParaOpcionHabilitada:'S',
+			SOS_3_claveParaOpcionDeshabilitada:'N',
 
 			/* Otras opciones */
-			SOS_3_grabacionAutomatica: false, 
+			SOS_3_grabacionAutomatica: false,
 			SOS_3_globalLanguage:'es'
 		};
 
-		
+
 		this.each(function(){
 			var objetoPrincipal = $(this);
 			/* Obtenemos la lista de opciones recibida, que sobrescribe la que se definió por defecto */
@@ -60,57 +60,57 @@
 			switch(opciones.SOS_3_globalLanguage){
 				case 'es':
 					var titulos = {
-						encabezadoDeDisponibles:'Opciones disponibles', 
-						encabezadoDeSeleccionados:'Opciones asignadas', 
-						enlaceAgregar:'Agregar', 
-						enlaceQuitar:'Quitar', 
-						enlaceGrabar:'Grabar', 
+						encabezadoDeDisponibles:'Opciones disponibles',
+						encabezadoDeSeleccionados:'Opciones asignadas',
+						enlaceAgregar:'Agregar',
+						enlaceQuitar:'Quitar',
+						enlaceGrabar:'Grabar',
 						PH_camposDeBusqueda: 'Buscar...'
 					};
 					break;
 				case 'en':
 					var titulos = {
-						encabezadoDeDisponibles:'Available options', 
-						encabezadoDeSeleccionados:'Attached options', 
-						enlaceAgregar:'Add', 
-						enlaceQuitar:'Remove', 
-						enlaceGrabar:'Save', 
+						encabezadoDeDisponibles:'Available options',
+						encabezadoDeSeleccionados:'Attached options',
+						enlaceAgregar:'Add',
+						enlaceQuitar:'Remove',
+						enlaceGrabar:'Save',
 						PH_camposDeBusqueda: 'Search...'
 					};
 					break;
 				case 'ca':
 					var titulos = {
-						encabezadoDeDisponibles:'Opcions disponibles', 
-						encabezadoDeSeleccionados:'Opcions assignades', 
-						enlaceAgregar:'Afegir', 
-						enlaceQuitar:'Treure', 
-						enlaceGrabar:'Gravar', 
+						encabezadoDeDisponibles:'Opcions disponibles',
+						encabezadoDeSeleccionados:'Opcions assignades',
+						enlaceAgregar:'Afegir',
+						enlaceQuitar:'Treure',
+						enlaceGrabar:'Gravar',
 						PH_camposDeBusqueda: 'Cercar...'
 					};
 					break;
 				case 'pt':
 					var titulos = {
-						encabezadoDeDisponibles:'Opções disponíveis', 
-						encabezadoDeSeleccionados:'Opções atribuídas', 
-						enlaceAgregar:'Adicionar', 
-						enlaceQuitar:'Remover', 
-						enlaceGrabar:'Registro', 
+						encabezadoDeDisponibles:'Opções disponíveis',
+						encabezadoDeSeleccionados:'Opções atribuídas',
+						enlaceAgregar:'Adicionar',
+						enlaceQuitar:'Remover',
+						enlaceGrabar:'Registro',
 						PH_camposDeBusqueda: 'Pesquisa...'
 					};
 					break;
 				case 'fr':
 					var titulos = {
-						encabezadoDeDisponibles:'Options disponibles', 
-						encabezadoDeSeleccionados:'Options attribuées', 
-						enlaceAgregar:'Ajouter', 
-						enlaceQuitar:'Supprimer', 
-						enlaceGrabar:'Sauvegarder', 
+						encabezadoDeDisponibles:'Options disponibles',
+						encabezadoDeSeleccionados:'Options attribuées',
+						enlaceAgregar:'Ajouter',
+						enlaceQuitar:'Supprimer',
+						enlaceGrabar:'Sauvegarder',
 						PH_camposDeBusqueda: 'Recherche...'
 					};
 					break;
 			}; // Final de definición de idiomas
 
-			/* Obtenemos el nombre del contenedor global en el que se van a incluir los selectores y 
+			/* Obtenemos el nombre del contenedor global en el que se van a incluir los selectores y
 			los botones, para poder referenciarlo en el código y aplicarle los distintos elementos. */
 			var nombreDelContenedorGeneral = $(this).attr('id');
 			/* Extendemos el nombre del contenedor general como objeto jQuery para poder emplearlo directamente en el resto del código. */
@@ -216,8 +216,8 @@
 			var selectorDeAsignadosExtendido = $(selectorDeAsignados);
 			selectorDeAsignadosExtendido.appendTo(contenedorDeSelectorDeAsignadosExtendido);
 
-			/* Se obtiene la matriz de elementos mediante PHP. Esto se 
-			encapsula en una función para poder invocarlo en donde se 
+			/* Se obtiene la matriz de elementos mediante PHP. Esto se
+			encapsula en una función para poder invocarlo en donde se
 			necesite. */
 			var matrizDeOpciones = Array();
 			$.fn.obtenerMatrizDeOpciones = function(){
@@ -226,7 +226,7 @@
 					data :{},
 					type:'POST',
 					dataType:'json',
-					async:false, 
+					async:false,
 					success:function(resultado) {
 						matrizDeOpciones = resultado;
 					}
@@ -234,7 +234,7 @@
 				for (elemento in matrizDeOpciones) matrizDeOpciones[elemento]["SOS_3_index"] = elemento;
 			};
 
-			/* Definimos la funcionalidad que crea las opciones de los selectores 
+			/* Definimos la funcionalidad que crea las opciones de los selectores
 			y las ubica en el que le corresponda a cada una. */
 			$.fn.construirSelectores = function(){
 				$("#" + idDeSelectorDeDisponibles + " option").each(function() {$(this).remove();});
@@ -258,8 +258,8 @@
 			$(this).obtenerMatrizDeOpciones();
 			$(this).construirSelectores();
 
-			/* Cuando se clica una opción de un select se comprueba si se deben bloquear o desbloquear los botones. 
-			Además, si se clica una opción de un selector, se desmarcan todas las que pudieran estar clicadas del otro. 
+			/* Cuando se clica una opción de un select se comprueba si se deben bloquear o desbloquear los botones.
+			Además, si se clica una opción de un selector, se desmarcan todas las que pudieran estar clicadas del otro.
 			Si los dos selectores quedan sin opciones marcadas, los dos botones de movimientos se desactivan. */
 			$('#' + idDeSelectorDeDisponibles + ', #' + idDeSelectorDeAsignados).on('change', function(){
 				var control = $(this).prop('id');
@@ -280,7 +280,7 @@
 				}
 			});
 
-			/* Cuando se teclea "algo" en el campo de búsqueda de disponibles se 
+			/* Cuando se teclea "algo" en el campo de búsqueda de disponibles se
 			seleccionan los datos que coinciden con el criterio de búsqueda. */
 			$("#" + idDeCampoDeBusquedaDeDisponibles + ", #" + idDeCampoDeBusquedaDeAsignados).on('change keyup', function(){
 				if ($(this).prop('id') == idDeCampoDeBusquedaDeDisponibles){
@@ -305,14 +305,14 @@
 					$.ajax({
 						url:opciones.SOS_3_scriptDeLecturaDeDatos,
 						data :{
-							'ignora_acentos': (opciones.SOS_3_ignorarAcentuadas)?'S':'N', 
-							'capitalizacion': (opciones.SOS_3_distinguirCapitalizacion)?'S':'N', 
+							'ignora_acentos': (opciones.SOS_3_ignorarAcentuadas)?'S':'N',
+							'capitalizacion': (opciones.SOS_3_distinguirCapitalizacion)?'S':'N',
 							'selector': selectorElegido,
 							'busqueda': campoDeBusqueda.prop('value')
 						},
 						type:'POST',
 						dataType:'json',
-						async:false, 
+						async:false,
 						success:function(resultado) {
 							matrizDeOpciones = resultado;
 						}
@@ -322,7 +322,7 @@
 				}
 			});
 
-			/* Cuando se pulsa un boton se cambia la opción de las opciones seleccionadas y se reconstruyen los select. 
+			/* Cuando se pulsa un boton se cambia la opción de las opciones seleccionadas y se reconstruyen los select.
 			Si está habilitada la opción de grabación automática, se llama a la función que hace la grabación. */
 			$('#' + opciones.SOS_3_nombreDelBotonDeAsignar + ', #' + opciones.SOS_3_nombreDelBotonDeQuitar).on('click', function(e){
 				e.preventDefault();
